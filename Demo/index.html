@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Bus Realtime</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="map"></div>
+    
+    <button class="btn-toggle-net" onclick="toggleNetwork(this)">
+        <i class="fas fa-network-wired"></i> Hiển thị mạng lưới trạm
+    </button>
+
+    <div class="sidebar">
+        <div class="header">
+            <h2 style="margin:0"><i class="fas fa-clock"></i> Realtime Bus</h2>
+        </div>
+        
+        <div class="body">
+            <div class="input-row" id="btn-start" onclick="pick('start')">
+                <i class="fas fa-circle" style="color:#27ae60"></i> <span id="txt-start">Chọn điểm đi...</span>
+            </div>
+            <div class="input-row" id="btn-end" onclick="pick('end')">
+                <i class="fas fa-map-marker-alt" style="color:#c0392b"></i> <span id="txt-end">Chọn điểm đến...</span>
+            </div>
+            
+            <div class="time-box">
+                <label style="font-size:13px; font-weight:bold; color:#555">Thời gian xuất phát:</label>
+                <input type="time" id="time-picker" class="time-input">
+            </div>
+            
+            <button class="btn-go" onclick="findRoute()" id="btn-find" disabled>TÌM LỘ TRÌNH</button>
+            
+            <div id="result" style="display:none; margin-top:20px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                    <span style="font-weight:bold">Tổng thời gian:</span>
+                    <span style="color:#c0392b; font-weight:bold" id="total-dur">0p</span>
+                </div>
+                <div id="steps"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

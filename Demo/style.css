@@ -1,0 +1,82 @@
+body { margin: 0; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+#map { height: 100vh; width: 100%; }
+
+.sidebar {
+    position: absolute; top: 10px; right: 10px; width: 380px; height: 95vh;
+    background: white; z-index: 999; border-radius: 12px; display: flex; flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); transition: 0.3s;
+}
+.sidebar.collapsed { transform: translateX(400px); }
+
+.header { background: #2c3e50; color: white; padding: 15px; border-radius: 12px 12px 0 0; }
+.body { padding: 15px; overflow-y: auto; flex: 1; }
+
+.input-row { 
+    display: flex; align-items: center; gap: 10px; padding: 12px; 
+    border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; cursor: pointer; 
+}
+.input-row.active { background: #ecf0f1; border-color: #2c3e50; }
+
+.time-box {
+    background: #f8f9fa; padding: 10px; border-radius: 8px; margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+.time-input {
+    width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 6px;
+    font-family: monospace; font-weight: bold;
+}
+
+.btn-go { 
+    width: 100%; padding: 12px; background: #27ae60; color: white; border:none; 
+    border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px;
+}
+.btn-go:disabled { background: #bdc3c7; }
+
+.btn-toggle-net {
+    position: absolute; bottom: 20px; left: 20px; z-index: 999;
+    background: white; border: 2px solid #2c3e50; color: #2c3e50;
+    padding: 8px 12px; border-radius: 20px; font-weight: bold; cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.btn-toggle-net.active { background: #2c3e50; color: white; }
+
+.step { 
+    position: relative; 
+    margin-bottom: 25px; 
+    padding-left: 45px; 
+    border-left: 2px solid #ddd; 
+    margin-left: 15px;
+}
+
+.step::before {
+    position: absolute; left: -20px; top: 0; 
+    width: 40px; height: 32px;
+    background: white; 
+    
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 18px;
+    
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+}
+
+.step.bus::before { 
+    content: "\f207"; 
+    color: #2980b9; 
+}
+
+.step.walk::before, .step.transfer::before { 
+    content: "\f554"; 
+    color: #27ae60; 
+}
+
+.step.transfer::before { color: #f39c12; }
+
+.step-head { font-weight: bold; color: #333; margin-bottom: 4px; font-size: 15px; }
+.step-sub { 
+    font-size: 13px; color: #555; margin-top: 4px; 
+    line-height: 1.5; 
+}
+
+.picking { cursor: crosshair !important; }
