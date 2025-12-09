@@ -1,10 +1,6 @@
 <h1 align="center">BusRouteDelay-MLP  
 Intelligent Bus Route Decision Support System using GTFS & Multilayer Perceptrons</h1>
 
-<p align="center">
-  <b>Machine Learning • Transportation Systems • Graph Modeling • Deep Learning</b>
-</p>
-
 ---
 
 <h2>Overview</h2>
