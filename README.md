@@ -1,4 +1,4 @@
-<h1 align="center">🚍 BusRouteDelay-MLP  
+<h1 align="center">BusRouteDelay-MLP  
 Intelligent Bus Route Decision Support System using GTFS & Multilayer Perceptrons</h1>
 
 <p align="center">
@@ -7,7 +7,7 @@ Intelligent Bus Route Decision Support System using GTFS & Multilayer Perceptron
 
 ---
 
-<h2>📌 Overview</h2>
+<h2>Overview</h2>
 
 This project implements a Decision Support System for bus route planning in Hanoi using:
 
@@ -21,17 +21,17 @@ The system predicts real-world delays under multiple traffic scenarios, then use
 
 ---
 
-<h2>📂 Project Highlights</h2>
+<h2>Highlights</h2>
 
-✔️ Build a complete GTFS-based bus network graph  
-✔️ Simulate realistic traffic delay scenarios  
-✔️ Train an MLP model to predict edge travel time  
-✔️ Integrate dynamic weights into a routing algorithm  
-✔️ Create a web app for real-time route visualization  
+Build a complete GTFS-based bus network graph  
+Simulate realistic traffic delay scenarios  
+Train an MLP model to predict edge travel time  
+Integrate dynamic weights into a routing algorithm  
+Create a web app for real-time route visualization  
 
 ---
 
-<h2>🗂 Dataset & Preprocessing</h2>
+<h2>Dataset & Preprocessing</h2>
 
 GTFS files used:
 
@@ -48,14 +48,14 @@ The data pipeline includes:
 - Computing geographic distances via Haversine  
 - Generating delay labels using three traffic scenarios  
 
-<h3>📸 Dataset Illustration</h3>
+<h3>Dataset Illustration</h3>
 
-<!-- INSERT DATASET IMAGE HERE -->
-<p align="center"><img src="YOUR_DATASET_IMAGE_HERE" width="80%"></p>
+
+<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/d0710058-8a09-46a3-93d4-347326e24002" width="80%"></p>
 
 ---
 
-<h2>🌐 Graph Construction</h2>
+<h2>Graph Construction</h2>
 
 The bus network is modeled as a **directed graph**, where:
 
@@ -65,10 +65,9 @@ The bus network is modeled as a **directed graph**, where:
 
 Walking edges are generated using **BallTree radius queries**, linking stops within 300 meters.
 
-<h3>📸 Graph Connectivity Visualization</h3>
+<h3>Graph Connectivity Visualization</h3>
 
-<!-- INSERT GRAPH CONNECTIVITY IMAGE HERE -->
-<p align="center"><img src="YOUR_GRAPH_IMAGE_HERE" width="80%"></p>
+<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/d6f58e3c-0522-41e6-b34a-0a3e8f24fee9" width="80%"></p>
 
 ---
 
@@ -101,8 +100,8 @@ The model is trained on synthetic traffic scenarios:
 
 <h3>📸 MLP Architecture Illustration</h3>
 
-<!-- INSERT MLP MODEL IMAGE HERE -->
-<p align="center"><img src="YOUR_MLP_IMAGE_HERE" width="80%"></p>
+
+<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/d5db9f36-b1e3-4e67-99bd-561ed32228b1" width="80%"></p>
 
 ---
 
@@ -132,8 +131,8 @@ The web app features:
 
 <h3>📸 Demo Results</h3>
 
-<!-- INSERT DEMO RESULT IMAGE HERE -->
-<p align="center"><img src="YOUR_DEMO_IMAGE_HERE" width="80%"></p>
+
+<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/e4f3014b-3a7f-496e-bc9b-e9086ea25bdf" width="80%"></p>
 
 ---
 
@@ -151,21 +150,8 @@ The system:
 - Avoids congested areas even when shortest-distance routes are slower  
 - Responds under ~1 second per query  
 
----
-
 <h2>🚀 Future Improvements</h2>
 
 - Integrating real-time GPS bus data  
-- Using advanced routing (A*, contraction hierarchies)  
-- Adding multimodal support (metro, bikes, on-demand transport)  
+- Using advanced routing (A*, contraction hierarchies)
 - Personalizing routes using user travel history  
-
----
-
-<h2>📜 License</h2>
-
-This project is available under the MIT License unless specified otherwise.
-
----
-
-<h2 align="center">⭐ If you found this project helpful, consider starring the repository!</h2>
