@@ -67,7 +67,7 @@ Walking edges are generated using **BallTree radius queries**, linking stops wit
 
 ---
 
-<h2>🧠 MLP Model for Travel-Time Prediction</h2>
+<h2>MLP Model for Travel-Time Prediction</h2>
 
 A custom MLP is trained to predict dynamic travel time from:
 
@@ -101,7 +101,7 @@ The model is trained on synthetic traffic scenarios:
 
 ---
 
-<h2>🛣 Routing Algorithm</h2>
+<h2>Routing Algorithm</h2>
 
 The routing engine uses a **Time-Dependent Dijkstra**:
 
@@ -115,7 +115,7 @@ This produces **real-time fastest routes**, not just shortest-distance routes.
 
 ---
 
-<h2>🌐 Web Application</h2>
+<h2>Web Application</h2>
 
 The web app features:
 
@@ -125,14 +125,14 @@ The web app features:
 - Route step visualization with icons  
 - Auto-zoom to full route  
 
-<h3>📸 Demo Results</h3>
+<h3>Demo Results</h3>
 
 
 <p align="center"><img alt="image" src="https://github.com/user-attachments/assets/e4f3014b-3a7f-496e-bc9b-e9086ea25bdf" width="80%"></p>
 
 ---
 
-<h2>📈 Experimental Results</h2>
+<h2>Experimental Results</h2>
 
 Performance of the MLP across the three scenarios:
 
@@ -146,7 +146,7 @@ The system:
 - Avoids congested areas even when shortest-distance routes are slower  
 - Responds under ~1 second per query  
 
-<h2>🚀 Future Improvements</h2>
+<h2>Future Improvements</h2>
 
 - Integrating real-time GPS bus data  
 - Using advanced routing (A*, contraction hierarchies)
